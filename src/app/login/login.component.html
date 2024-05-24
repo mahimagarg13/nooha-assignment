@@ -1,0 +1,39 @@
+<!-- login.component.html -->
+<div class="Rectangle18"></div>
+<div class="login-container">
+  <img src="../../assets/Logo/logo.png" alt="logo" class="logo-img" />
+  <mat-card class="login-card">
+    <mat-card-content>
+      <form class="login-form" [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+        <div class="input-group">
+          <input class="full-width" formControlName="username" placeholder="USERNAME">
+          <img src="../../assets/Logo/user_square_shoulders 1.png" alt="logo" class="icon-login" />
+        </div>
+        <div class="input-group">
+          <input class="full-width" formControlName="password" type="password" placeholder="PASSWORD">
+          <img src="../../assets/lock-1 1.png" alt="logo" class="icon-login" />
+        </div>
+        <div class="error-container">
+          <img src="../../assets/error-circle 1.png" alt="logo" class="error-icon" />
+          <div class='error-text'> Invalid credentials. Please try again.
+          </div>
+        </div>
+        <button class="submit-btn" type="submit">SIGN IN
+        </button>
+      </form>
+      <div class="forgot-password">Forgot Password?</div>
+    </mat-card-content>
+  </mat-card>
+
+
+</div>
+<footer class="footer">
+  <div class="footer-content">
+    <img src="../../assets/Flat_copy.png" alt="logo" class="footer-icon" />
+    <img src="../../assets/linkedin_square 1.png" alt="logo" class="footer-icon" />
+    <img src="../../assets/twitter-2 1.png" alt="logo" class="footer-icon" />
+  </div>
+  <div class="footer-content">
+    © Copyright Dyaz Innovate 2023. All rights reserved.
+  </div>
+</footer>

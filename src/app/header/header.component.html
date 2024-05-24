@@ -1,0 +1,33 @@
+<div class="template-nav">
+    <div style="width: 145px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+">
+
+        <img src="../../assets/logoipsum-329 1 (1).png" alt="logo" class="logo-img" style="display: block;">
+
+    </div>
+    <div class="stepper-container">
+
+        <mat-stepper style="  background-color: #cf682f;   height: 30px;
+
+" [linear]="isLinear" #stepper>
+            <mat-step [stepControl]="firstFormGroup" />
+            <mat-step [stepControl]="secondFormGroup" />
+            <mat-step [stepControl]="thirdFormGroup" />
+            <mat-step [stepControl]="fourthFormGroup" />
+            <mat-step [stepControl]="fifthFormGroup" />
+        </mat-stepper>
+        <div>
+            Product Info
+            Manage Document
+            eCTD Submission
+            Validation
+            Dispatch
+        </div>
+    </div>
+
+
+</div>

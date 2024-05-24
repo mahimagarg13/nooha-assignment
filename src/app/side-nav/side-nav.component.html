@@ -1,0 +1,24 @@
+<div class="sideNav-container">
+    <nav class="sideNav">
+        <ul>
+            <li (click)="toggleSubMenuConfig()">
+                Configurations
+                <img src="../../assets/up_arrow 1.png" class="arrow" [class.rotate]="isConfigMenuOpen" />
+            </li>
+                <ul class="sub-menu" [class.open]="isConfigMenuOpen">
+                    <li>Templates</li>
+                </ul>
+          
+
+            <li (click)="toggleSubMenu()">Document Prep
+                <img src="../../assets/up_arrow 1.png" class="arrow" [class.rotate]="isSubMenuOpen" />
+            </li>
+
+                <ul class="subMenu2" [class.open]="isSubMenuOpen">
+                    <li>Product</li>
+                    <li>Applications</li>
+                    <li>Sequences</li>
+                </ul>
+        </ul>
+    </nav>
+</div>

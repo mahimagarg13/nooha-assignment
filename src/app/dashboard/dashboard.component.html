@@ -1,0 +1,77 @@
+<div class="dashboard-container">
+    <div class="dashboard-title">
+     Templates
+     <button class="create-btn"><img style="height: 14px;width: 14px;" src="../../assets/add-3 3.png" alt="add icon"/> Create Template</button>
+    </div>
+    <div>
+     <div class="dashboard-form">
+        <form class="row">
+            <div class="form-group col-md-3">
+              <label for="startDate">Start Date</label>
+              <input type="date" id="startDate" name="startDate" class="form-control" [(ngModel)]="startDate">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="endDate">End Date</label>
+              <input type="date" id="endDate" name="endDate" class="form-control" [(ngModel)]="endDate">
+            </div>
+            <div class="form-group col-md-3">
+              <label for="selectOption">Select Option</label>
+              <select id="selectOption" name="selectOption" class="form-control" [(ngModel)]="selectedOption">
+                <option value="option1">Option 1</option>
+                <option value="option2">Option 2</option>
+                <option value="option3">Option 3</option>
+              </select>
+            </div>
+            <div class="form-group col-md-2">
+              <button type="submit" class="btn">
+                <img style="width: 14px;height: 13.65px;" src="../../assets/search-icon 2.png" alt="search-icon"/> Search</button>
+            </div>
+          </form>
+          
+          
+     </div>
+    </div>
+    <div class="table-container">
+        <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+     
+            <ng-container matColumnDef="id">
+              <th mat-header-cell *matHeaderCellDef> Template ID </th>
+              <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="name">
+              <th mat-header-cell *matHeaderCellDef> Template Name </th>
+              <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="region">
+              <th mat-header-cell *matHeaderCellDef> Region </th>
+              <td mat-cell *matCellDef="let element"> {{element.region}} </td>
+            </ng-container>
+          
+            <ng-container matColumnDef="modifiedBy">
+              <th mat-header-cell *matHeaderCellDef> Modified By </th>
+              <td mat-cell *matCellDef="let element"> {{element.modifiedBy}} </td>
+            </ng-container>
+            <ng-container matColumnDef="modifiedOn">
+              <th mat-header-cell *matHeaderCellDef> Modified On </th>
+              <td mat-cell *matCellDef="let element"> {{element.modifiedOn}} </td>
+            </ng-container>
+            <ng-container matColumnDef="actions">
+              <th mat-header-cell *matHeaderCellDef> Actions </th>
+              <td mat-cell *matCellDef="let element"> 
+                <img src="../../assets/edit 5.png"  style="margin-right: 20px;"/> 
+
+                <img src="../../assets/delete 2.png" /> </td>
+            </ng-container>
+          
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSizeOptions]="[5, 10, 25, 100]" showFirstLastButtons></mat-paginator>
+
+          
+    </div>
+ </div>
+ 
